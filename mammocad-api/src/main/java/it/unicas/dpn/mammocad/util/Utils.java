@@ -1,15 +1,11 @@
-package it.unicas.dpn.massdetectionservice.util;
+package it.unicas.dpn.mammocad.util;
 
-import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
 import java.util.Base64;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 /**

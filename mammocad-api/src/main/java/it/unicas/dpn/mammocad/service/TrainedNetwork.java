@@ -1,20 +1,13 @@
-package it.unicas.dpn.massdetectionservice.service;
+package it.unicas.dpn.mammocad.service;
 
-import it.unicas.dpn.massdetectionservice.MassDetectionServiceApplication;
-import it.unicas.dpn.massdetectionservice.model.Prediction;
-import it.unicas.dpn.massdetectionservice.util.Utils;
+import it.unicas.dpn.mammocad.model.Prediction;
+import it.unicas.dpn.mammocad.util.Utils;
 import org.datavec.image.loader.NativeImageLoader;
-import org.deeplearning4j.nn.api.Model;
 import org.deeplearning4j.nn.graph.ComputationGraph;
-import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.api.ndarray.INDArray;
-import org.nd4j.linalg.dataset.DataSet;
-import org.nd4j.linalg.dataset.api.preprocessor.DataNormalization;
 import org.nd4j.linalg.dataset.api.preprocessor.Normalizer;
-import org.nd4j.linalg.dataset.api.preprocessor.VGG16ImagePreProcessor;
 import org.nd4j.linalg.primitives.Pair;
-import org.slf4j.Logger;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ResourceUtils;
 

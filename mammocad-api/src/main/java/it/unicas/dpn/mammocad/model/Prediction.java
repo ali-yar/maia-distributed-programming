@@ -1,4 +1,4 @@
-package it.unicas.dpn.massdetectionservice.model;
+package it.unicas.dpn.mammocad.model;
 
 public class Prediction {
 

@@ -29,3 +29,6 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+.mvn/
+target/
