@@ -1,0 +1,53 @@
+<ion-view view-title="Diagnosis">
+
+	<ion-nav-buttons side="right">
+		<button class="button button-icon icon ion-image" ng-click="loadFile()"></button>
+	</ion-nav-buttons>
+
+	
+
+
+	<ion-content class="padding" overflow-scroll="true">
+
+		<div class="row" ng-show="!showCroppedWindow">
+			<br>
+			<div class="col col-33"></div>
+			<div class="col col-33 col-center">
+				<button  class="button icon-right ion-image button-balanced button-block" type="submit" ng-click="loadFile()">		Upload Mammogram
+				</button>
+			</div>
+			<div class="col col-33"></div>
+		</div>
+
+		<div ng-show="showCroppedWindow" style="position:absolute;margin-left:70vw;width:200px;">
+			Focus Window:
+			<br><br>
+			<img ng-src="{{cropped.image}}" />
+			<button  class="button icon-right ion-chevron-right button-balanced button-block" type="submit" ng-click="diagnose()">Diagnose</button>
+
+			<div ng-show="showPredictions">
+				Predictions:
+				<br>
+				<div class="list list-inset">
+					<div class="item">
+						Negative -> {{predictions.probabilityClass0}} %
+					</div>
+
+					<div class="item">
+						Positive &nbsp&nbsp-> {{predictions.probabilityClass1}} %
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" ng-show="showCroppedWindow">
+			<div class="col col-75">
+				<input type="file" id="upload" accept="image/*" style="display:none" />
+				<croppie ng-if="cropped.source" src="cropped.source" ng-model="cropped.image"
+				options="{boundary:{width:600,height:800}, enforceBoundary:true}"></croppie>
+			</div>
+		</div>
+
+	</ion-content>
+
+</ion-view>

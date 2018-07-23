@@ -1,0 +1,46 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="#{{template.docId}} - {{template.docName}}">
+
+  <ion-content overflow-scroll="true" class="padding padding-horizontal" >
+    <ul class="list">
+      <li class="item">
+        Document ID: <span style="float: right;">{{template.docId}}</span>
+      </li>
+      <li class="item">
+        Document Name: <span style="float: right;">{{template.docName}}</span>
+      </li>
+      <li class="item">
+        Location: <span style="float: right;">{{template.location}}</span>
+      </li>
+      <li class="item">
+        Date: <span style="float: right;">{{template.date}}</span>
+      </li>
+      <li class="item">
+        Patient Name: <span style="float: right;">{{template.patientName}}</span>
+      </li>
+      <li class="item">
+        Patient Age: <span style="float: right;">{{template.patientAge}}</span>
+      </li>
+      <li class="item">
+        Patient Ethnicity: <span style="float: right;">{{template.patientEthnicity}}</span>
+      </li>
+    </ul>
+
+    <div class="card">
+      <div class="item">
+       <img style="width:100%" ng-src={{template.data}} />
+      </div>
+    </div>
+    
+    <br>
+
+  </ion-content>
+  
+</ion-view>
+
+

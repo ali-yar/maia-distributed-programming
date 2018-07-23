@@ -1,0 +1,24 @@
+<ion-view view-title="Mammograms">
+
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-refresh" ng-click="refreshData()"></button>
+    <button class="button button-icon icon ion-ios-plus-outline" ng-click="newTemplate()"></button>
+  </ion-nav-buttons>
+
+  <ion-content class="padding padding-horizontal" overflow-scroll="false">
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="template in templates" href="#/tab/mammograms/{{template.$id}}">
+        
+        <h2>#{{template.docId}} - {{template.docName}}</h2>
+        <p>{{template.date}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(template)">
+          Delete
+        </ion-option-button>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-view>

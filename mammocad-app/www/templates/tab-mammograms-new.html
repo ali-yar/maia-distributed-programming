@@ -1,0 +1,73 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="New Mammogram">
+  <ion-content overflow-scroll="true" class="padding padding-horizontal">
+    <form>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Document ID</span>
+          <input type="text" ng-model="formData.docId">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Document Name</span>
+          <input type="text" ng-model="formData.docName">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Location</span>
+          <input type="text" ng-model="formData.location">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Date</span>
+          <input type="date" min="1900-01-01" ng-model="tmp.date">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Patient Name</span>
+          <input type="text" ng-model="formData.patientName">
+        </label>
+
+       <label class="item item-input">
+          <span class="input-label">Patient Age</span>
+          <input type="text" ng-model="formData.patientAge">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Patient Ethnicity</span>
+          <input type="text" ng-model="formData.patientEthnicity">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Attachement</span>
+          <input type="file" id="fileinput" />
+        </label>
+
+        <label class="item">
+          <button class="button button-block button-positive" type="submit" ng-click="submit()">Submit</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
+
+
+<!--         <div class="item row">
+          <div class="col">
+             <label class="item-input item-select">
+                <div class="input-label">Semester</div>
+                <select ng-options="semester as semester for semester in options.semester" ng-model="formData.semester">
+                </select>
+              </label>
+          </div>
+          <div class="col">
+            <label class="item-input">
+              <span class="input-label">Year</span>
+              <input type="number" ng-model="formData.name">
+            </label>
+          </div>
+        </div> 

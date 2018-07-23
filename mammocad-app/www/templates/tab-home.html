@@ -1,0 +1,29 @@
+<ion-view hide-back-button="true" view-title="Home">
+  <ion-content class="padding padding-horizontal" scroll="false">
+	     <div id="content">
+	        <div id="profile-info">
+	          <img id="profile-image" ng-src={{user.photo}}>
+	          <h3 id="profile-name">{{user.name}}</h3>
+	          <span id="profile-description">{{user.affiliation}}</span>
+	        </div>
+	        <div class="list">
+			  <a class="item item-icon-left" href="">
+			    <i class="icon ion-android-notifications-none"></i>
+			    Notifications
+			    <span class="badge badge-assertive">2</span>
+			  </a>
+			   <a class="item item-icon-left" href="">
+			    <i class="icon ion-ios-trash-outline"></i>
+			    Delete Account
+			  </a>
+			  <a class="item item-icon-left" href="" ng-click="logout()">
+			    <i class="icon ion-log-out"></i>
+			    Logout
+			  </a>
+			</div>
+		</div>
+  </ion-content>
+</ion-view>
+
+
+

@@ -29,8 +29,6 @@ public class MassDetectionServiceApplication {
 
 		TrainedNetwork model = context.getBean(TrainedNetwork.class);
 
-//		System.out.println(model.doPrediction());
-
 	}
 
 }

@@ -1,0 +1,80 @@
+<ion-view hide-nav-bar="true">
+  <ion-slides options="options" slider="data.slider" style="height:90vh; ">
+
+    <ion-slide-page>
+      <ion-content class="padding">
+        <div class="card" style="box-shadow: none; height:80vh;">
+          
+          <div class="item item-text-wrap">
+            <img class="center" src="img/logo.png">
+          </div>
+
+          <br>
+          <p class="text-center padding">MammoCAD is an online Computer-Aided Decision system for the detection of breast masses</p>
+          <br>
+          
+          <button class="center button button-positive" ng-click="showLoginSlide()">Connect Now!</button>
+
+          <!-- <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">MammoCAD</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/ali-yar" property="cc:attributionName" rel="cc:attributionURL">Ali Berrada</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. -->
+
+        </div>
+      </ion-content>
+    </ion-slide-page>
+
+    <ion-slide-page>
+      <ion-content class="padding">
+        <div class="card padding-horizontal" style="box-shadow: none; height:80vh;">
+          <h3 class="center-txt">{{formTitle}}</h3>
+          <div class="list">
+            <label class="item item-input item-floating-label" ng-if="isNewAccount">
+              <span class="input-label">Name</span>
+              <input type="text" placeholder="Name" ng-model="form.name" required>
+            </label>
+            <label class="item item-input item-floating-label" ng-if="isNewAccount">
+              <span class="input-label">Affiliation</span>
+              <input type="text" placeholder="Affiliation" ng-model="form.affiliation" required>
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Email</span>
+              <input type="email" placeholder="Email" ng-model="form.email" required>
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Password</span>
+              <input type="password" placeholder="Password" ng-model="form.password" required>
+            </label>
+            <label class="item item-input item-floating-label" ng-if="isNewAccount">
+              <span class="input-label">Retype password</span>
+              <input type="password" placeholder="Retype password" ng-model="form.retypePassword" required>
+            </label>
+          </div>
+          <div class="padding">
+            <button class="button button-block button-positive" ng-if="!isNewAccount" ng-click="submit()">Submit</button>
+            <div class="button-bar" ng-if="isNewAccount">
+              <button class="button button-assertive" ng-click="toggleIsNewAccount()">Cancel</button>
+              <button class="button button-positive" ng-click="submit()">Submit</button>
+            </div>
+          </div>
+          <div class="padding" ng-if="!isNewAccount">
+            <h4>Forgot Password?</h4>
+            <button class="center button button-positive" ng-click="" disable>Reset Password</button>
+          </div>
+          <div class="padding" ng-if="!isNewAccount">
+            <h4>New user?</h4>
+            <button class="center button button-positive" ng-click="toggleIsNewAccount()">Create Account</button>
+          </div>
+        </div>
+      </ion-content>
+    </ion-slide-page>
+    
+  </ion-slides>
+
+  <ion-footer no-shadow>
+    <ion-toolbar position="bottom">
+      <div style="margin-right:30px; width:300px; display:block; float: right;">
+        <div style="float: left; margin-right: 50px"><img height="60" src="img/maia.png"></div>
+        <div style="float: left;"><img height="60" src="img/unicas.png"></div>
+      </div>
+      
+    </ion-toolbar>
+  </ion-footer>
+</ion-view>
