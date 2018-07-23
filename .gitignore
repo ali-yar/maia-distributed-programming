@@ -3,8 +3,6 @@
 *.int
 *.lk
 
-mammocad-app/
-
 
 /target/
 !.mvn/wrapper/maven-wrapper.jar
